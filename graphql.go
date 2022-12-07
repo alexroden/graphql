@@ -250,7 +250,8 @@ func ImmediatelyCloseReqBody() ClientOption {
 type ClientOption func(*Client)
 
 type graphErr struct {
-	Message string
+	Message    string
+	Extensions map[string]string
 }
 
 func (e graphErr) Error() string {
